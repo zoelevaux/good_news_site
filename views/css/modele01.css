@@ -1,6 +1,6 @@
 /* ==============================================
    FEUILLE DE STYLES DES GABARITS HTML/CSS --- 01
-   © Elephorm & Alsacreations.com
+   ï¿½ Elephorm & Alsacreations.com
    Conditions d'utilisation:
    http://creativecommons.org/licenses/by/2.0/fr/
    ============================================== */
@@ -9,12 +9,12 @@
 /* --- COULEURS --- */
 
 /* Note: vous pouvez modifier simplement l'aspect de ce gabarit en modifiant
-   uniquement les couleurs de fond (propriétés background) et les couleurs
-   du texte (propriété color).
+   uniquement les couleurs de fond (propriï¿½tï¿½s background) et les couleurs
+   du texte (propriï¿½tï¿½ color).
    Pour modifier la disposition des blocs, voir plus bas dans la feuille de
-   styles la partie «positionnement». */
+   styles la partie ï¿½positionnementï¿½. */
 
-/* Général */
+/* Gï¿½nï¿½ral */
 body {
 	color: #F0E39E;
 	background: #181A12; /* Voir -> Note 1 ci-dessous */
@@ -29,7 +29,7 @@ strong {
 	color: #A1B55D;
 }
 
-/* En-tête */
+/* En-tï¿½te */
 #entete {
 	background: #181A12;
 }
@@ -62,7 +62,7 @@ strong {
 
 /* Pied de page */
 #pied {
-	color: #E6A948;
+	color: #FF4C00;
 }
 
 /* Formulaire */
@@ -84,7 +84,7 @@ body {
 	padding: 0; /* -> 2 */
 }
 
-/* En-tête */
+/* En-tï¿½te */
 #entete {
 	padding: 15px 20px 10px 20px;
 }
@@ -166,26 +166,26 @@ body {
 /* --- NOTES ---
 
 1.	Notes que cette couleur de fond n'est apparente qu'en bas de page. Plus
-	haut, elle est masque: par la couleur de fond de l'en-tête, puis par la
+	haut, elle est masque: par la couleur de fond de l'en-tï¿½te, puis par la
 	couleur de fond du menu, puis par la couleur de fond du contenu. Seul le
 	pied de page laisse apparaitre cette couleur de fond.
 
-2.	Pour ce gabarit, on supprime l'écart entre les «bords» du navigateur et
-	le contenu, en passant le padding de l'élément BODY à zéro.
-	(Voir également la note numéro 2 dans base.css.)
+2.	Pour ce gabarit, on supprime l'ï¿½cart entre les ï¿½bordsï¿½ du navigateur et
+	le contenu, en passant le padding de l'ï¿½lï¿½ment BODY ï¿½ zï¿½ro.
+	(Voir ï¿½galement la note numï¿½ro 2 dans base.css.)
 
-3.	Si les éléments de notre menu se placent horizontalement plutôt que les
-	uns en dessous des autres, c'est parce qu'ils ne sont plus affichés
-	comme des blocs (ce qui est normalement le cas des éléments LI), mais
-	comme des éléments de type en-ligne. On obtient ce comportement avec la
-	propriété "display" et la valeur "inline".
+3.	Si les ï¿½lï¿½ments de notre menu se placent horizontalement plutï¿½t que les
+	uns en dessous des autres, c'est parce qu'ils ne sont plus affichï¿½s
+	comme des blocs (ce qui est normalement le cas des ï¿½lï¿½ments LI), mais
+	comme des ï¿½lï¿½ments de type en-ligne. On obtient ce comportement avec la
+	propriï¿½tï¿½ "display" et la valeur "inline".
 	Le fait que nos LI se comportent comme un flot unique de texte aura deux
-	conséquences:
-	- on va pouvoir aligner le texte du menu à gauche (c'est le cas ici), à
-	  droite ou encore au centre, en jouant sur la propriété "text-align" du
-	  menu (sur l'élément UL ou sur div#navigation);
-	- certains styles ne pourront pas être appliqués... par exemple, la
-	  propriété "width" ne peut pas être utilisée pour les éléments en
+	consï¿½quences:
+	- on va pouvoir aligner le texte du menu ï¿½ gauche (c'est le cas ici), ï¿½
+	  droite ou encore au centre, en jouant sur la propriï¿½tï¿½ "text-align" du
+	  menu (sur l'ï¿½lï¿½ment UL ou sur div#navigation);
+	- certains styles ne pourront pas ï¿½tre appliquï¿½s... par exemple, la
+	  propriï¿½tï¿½ "width" ne peut pas ï¿½tre utilisï¿½e pour les ï¿½lï¿½ments en
 	  "display: inline".
 
 */
