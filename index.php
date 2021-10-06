@@ -25,7 +25,7 @@
 /**
  * @return GenesisController
  */
-function genesis()
+function getGenesisController()
 {
     require_once('controllers/GenesisController.php');
     $controller = new GenesisController();
@@ -35,28 +35,46 @@ function genesis()
 /**
  * @return BooksController
  */
-function books()
+function getBooksController()
 {
     require_once('controllers/BooksController.php');
     $controller = new BooksController();
     return $controller;
 }
 
+/**
+ * @return ContactController
+ */
+function getContactController()
+{
+    require_once('controllers/ContactController.php');
+    $controller = new ContactController();
+    return $controller;
+}
+
+/**
+ * @return HomeController
+ */
+function getHomeController()
+{
+    require_once('controllers/HomeController.php');
+    $controller = new HomeController();
+    return $controller;
+}
+
 switch($action) {
 		case 'genesis':
-			$controller = genesis();
+			$controller = getGenesisController();
             break;
 		case 'books':
-			$controller = books();
+			$controller = getBooksController();
             break;
 		case 'contact':
-			require_once('controllers/ContactController.php');	
-			$controller = new ContactController();
-			break;	
+			$controller = getContactController();
+            break;
 		default: # Par défaut, le contrôleur de l'accueil est sélectionné
-			require_once('controllers/HomeController.php');
-			$controller = new HomeController();
-			break;
+			$controller = getHomeController();
+            break;
 	}
 	# Exécution du contrôleur correspondant à l'action demandée
 	$controller->run();
