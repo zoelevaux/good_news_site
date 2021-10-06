@@ -22,11 +22,20 @@
 	# Tester si une variable GET 'action' est précisée dans l'URL index.php?action=...
 	$action = (isset($_GET['action'])) ? htmlentities($_GET['action']) : 'default';
 	# Quelle action est demandée ?
-	switch($action) {
+/**
+ * @return GenesisController
+ */
+function genesis()
+{
+    require_once('controllers/GenesisController.php');
+    $controller = new GenesisController();
+    return $controller;
+}
+
+switch($action) {
 		case 'genesis':
-			require_once('controllers/GenesisController.php');
-			$controller = new GenesisController();
-			break;
+			$controller = genesis();
+            break;
 		case 'books':
 			require_once('controllers/BooksController.php');
 			$controller = new BooksController();
