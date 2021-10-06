@@ -30,5 +30,15 @@ class callSwitch{
         $controller = new ContactController();
         return $controller;
     }
+
+    /**
+     * @return GenesisController
+     */
+    public static function getGenesisController()
+    {
+        require_once('controllers/GenesisController.php');
+        $controller = new GenesisController();
+        return $controller;
+    }
 }
 ?>
