@@ -35,16 +35,6 @@ function getGenesisController()
     return $controller;
 }
 
-/**
- * @return ContactController
- */
-function getContactController()
-{
-    require_once('controllers/ContactController.php');
-    $controller = new ContactController();
-    return $controller;
-}
-
 switch($action) {
 		case 'genesis':
 			$controller = getGenesisController();
@@ -53,7 +43,7 @@ switch($action) {
 			$controller = callSwitch::getBooksController();
             break;
 		case 'contact':
-			$controller = getContactController();
+			$controller = callSwitch::getContactController();
             break;
 		default: # Par défaut, le contrôleur de l'accueil est sélectionné
 			$controller = callSwitch::getHomeController();
