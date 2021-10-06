@@ -4,10 +4,13 @@
 
 	# Variables globales du site
 	define('VIEW_PATH','views/');
+	define('MODELS_PATH', 'models/');
     define('EMAIL','jeanluc.collinet@ipl.be');
 	$date = date("j/m/Y");
-	
-	# Require des classes automatisé
+
+    require_once(MODELS_PATH.'callSwitch.class.php');
+
+    # Require des classes automatisé
 	function loadClass($class) {
 		require_once 'models/' . $class . '.class.php';
 	}
@@ -33,16 +36,6 @@ function getGenesisController()
 }
 
 /**
- * @return BooksController
- */
-function getBooksController()
-{
-    require_once('controllers/BooksController.php');
-    $controller = new BooksController();
-    return $controller;
-}
-
-/**
  * @return ContactController
  */
 function getContactController()
@@ -52,28 +45,18 @@ function getContactController()
     return $controller;
 }
 
-/**
- * @return HomeController
- */
-function getHomeController()
-{
-    require_once('controllers/HomeController.php');
-    $controller = new HomeController();
-    return $controller;
-}
-
 switch($action) {
 		case 'genesis':
 			$controller = getGenesisController();
             break;
 		case 'books':
-			$controller = getBooksController();
+			$controller = callSwitch::getBooksController();
             break;
 		case 'contact':
 			$controller = getContactController();
             break;
 		default: # Par défaut, le contrôleur de l'accueil est sélectionné
-			$controller = getHomeController();
+			$controller = callSwitch::getHomeController();
             break;
 	}
 	# Exécution du contrôleur correspondant à l'action demandée
